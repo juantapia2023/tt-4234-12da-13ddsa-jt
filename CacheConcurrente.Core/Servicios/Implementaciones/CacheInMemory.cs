@@ -131,7 +131,6 @@ namespace CacheConcurrente.Core.Servicios.Implementaciones
 
         public IEnumerable<KeyValuePair<string, string>> KeysAndValues()
         {
-            // Retornamos una instantanea actual de la cache
             // Filtramos los que ya expiraron pero que no han sido consultados
             return Diccionario
                 .Where(kvp => !kvp.Value.Value.EstaExpirado)
